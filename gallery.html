@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Cat Gallery 🐱</title>
+  <title>MIKA MY BABY </title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -31,7 +31,7 @@
   </style>
 </head>
 <body>
-  <h1>🐾 My Cat Gallery</h1>
+  <h1> MIKA </h1>
   <div class="gallery">
     <img src="cat1.jpg" alt="Cat 1">
     <img src="cat2.jpg" alt="Cat 2">
@@ -40,3 +40,20 @@
   <p><a href="index.html">⬅ Back to Home</a></p>
 </body>
 </html>
+
+/* Rainbow animated background with adjustable speed */
+:root {
+  --rainbow-speed: 15s; /* Change this value to speed up or slow down */
+}
+
+body {
+  background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet);
+  background-size: 1400% 1400%;
+  animation: rainbow var(--rainbow-speed) ease infinite;
+}
+
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
