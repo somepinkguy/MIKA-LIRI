@@ -48,21 +48,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rainbow Background</title>
   <style>
-    /* Adjustable rainbow animation speed */
+    /* CSS Variables for easy customization */
     :root {
-      --rainbow-speed: 2s; /* Change this value to speed up or slow down */
+      --rainbow-speed: 15s; /* Change this to make the animation faster or slower */
+      --gradient-colors: 
+        #ffb3ba, /* light red/pink */
+        #ffdfba, /* light orange */
+        #ffffba, /* light yellow */
+        #baffc9, /* light green */
+        #bae1ff, /* light blue */
+        #e3baff, /* light purple */
+        #ffd6f0; /* light pink/lavender */
     }
 
     /* Full-page rainbow background */
     body {
       margin: 0;
       height: 100vh;
-      background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet);
+      background: linear-gradient(270deg, var(--gradient-colors));
       background-size: 1400% 1400%;
       animation: rainbow var(--rainbow-speed) ease infinite;
     }
 
-    /* Keyframes for smooth gradient animation */
+    /* Keyframes for smooth horizontal gradient animation */
     @keyframes rainbow {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
