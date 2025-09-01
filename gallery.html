@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>My Cool Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      transition: background 0.5s;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #333;
+      color: #fff;
+    }
+    button:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to My Website 🚀</h1>
+  <p>Click the button to change the background color!</p>
+  <button onclick="changeColor()">Change Color</button>
+
+  <script>
+    function changeColor() {
+      const colors = ["#ff9999", "#99ff99", "#9999ff", "#ffff99", "#ffcc99", "#cc99ff"];
+      document.body.style.background = colors[Math.floor(Math.random() * colors.length)];
+    }
+  </script>
+</body>
+</html>
+
